@@ -35,4 +35,6 @@ Route::get('/about', 'PagesController@about');
 
 Route::get('/services', 'PagesController@services');
 
+Route::post('/poststore', 'PostsController@store');
+
 Route::resource('posts', 'PostsController');  //kreira nove putanje na osnovu funkcija zadatog kontrolera
