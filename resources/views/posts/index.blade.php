@@ -8,8 +8,7 @@
                 <h3><a class="nav-link link-secondary" href="/posts/{{$post->id}}">{{ $post->title }}</a></h3>
                 <p class='text-muted'>{{ $post->body }}</p>
                 <small class='text-muted'>posted at {{ $post->created_at }}</small>
-            </div>  
-            <p></p>          
+            </div>            
         @endforeach
         {{-- dodaje link za stranice na dnu --}}
         {{ $posts->links() }}  
