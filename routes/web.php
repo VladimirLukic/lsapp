@@ -13,9 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/welcome', function () {
+    return view('welcome');
+});
 
 // Route::get('/', function () {
 //     return "<h1>Welcome to Laravel";
@@ -38,6 +38,10 @@ Route::get('/services', 'PagesController@services');
 Route::post('/poststore', 'PostsController@store');
 
 Route::resource('posts', 'PostsController');  //kreira nove putanje na osnovu funkcija zadatog kontrolera
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

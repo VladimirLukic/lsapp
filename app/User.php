@@ -36,4 +36,9 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    //povezuje sa bazom Post i trazi broj postova
+    public function posts(){
+        return $this->hasMany('App\Post');
+    }
 }
